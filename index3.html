@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AngularJS3</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <style>
+        table, th, td{
+            border: 1px solid #696969;
+            padding: 2px;
+        }
+    </style>
+</head>
+<body ng-app="phoneBook">
+    <div ng-controller="phoneBookController">
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Phone</th>
+            </tr>
+            <tr ng-repeat="user in users">
+                <td>{{user.name}}</td>
+                <td>{{user.phone}}</td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        var phoneBook = new angular.modul("phoneBook", []);
+        phoneBook.controller("phomeBookController", function($scope){
+            $scope.user = [
+                {"name":"John", "phone":"012 965 854"},
+                {"name":"Robert", "phone":"012 125 236"},
+                {"name":"Thomas", "phone":"012 145 256"},
+                {"name":"", "phone":"012"}
+            ]
+        });
+    </script>
+    
+</body>
+</html>

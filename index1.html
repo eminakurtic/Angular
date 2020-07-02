@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AngularJS1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+</head>
+<body ng-app="">
+    <div ng-init="name='John'"></div>
+    <p>The user name is <span ng-bind="name"></span></p>
+    <p>The user name is {{name}}</p>
+    <hr>
+    <input type="text" ng-model="ime">
+    <input type="text" ng-model="prezime">
+    <p>The user name is {{ime}} {{prezime}}</p>
+    <hr>
+    <label>Price</label>
+    <input type="number" min="1" ng-model="price">
+    <label>Quantity</label>
+    <input type="number" min="1" ng-model="Quantity">
+    <p>Total: {{price * Quantity | currency}}</p>
+
+</body>
+</html>
